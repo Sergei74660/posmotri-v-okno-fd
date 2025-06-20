@@ -42,15 +42,15 @@ ol {
 
 .content {
   display: grid;
-  grid-template: 534px / 711px 399px;
+  grid-template-columns: 711px 399px;
   gap: 30px;
   justify-content: center;
-  align-content: center;
+  align-items: end;
 }
 
 .result {
-  align-self: end;
-  display: inline;
+  width: 711px;
+  height: 456px;
 }
 
 .result__video-container {
@@ -121,7 +121,7 @@ ol {
   margin-bottom: 5px;
 }
 
-.search-form__label:hover {
+.search-form__label:hover .search-form__label-text{
   text-decoration: underline;
 }
 
@@ -172,7 +172,7 @@ ol {
 }
 
 .search-form__submit-button {
-  font-size: 17px;
+  font-size: 18px;
   width: 194px;
 }
 
@@ -194,10 +194,20 @@ ol {
 }
 
 .content__list {
+  width: 390px;
+  display: grid;
+  gap: 30px;
+}
+
+.content__list-item {
+width: inherit;
+padding: 0 3px;
+}
+
+.content__list-container {
   position: relative;
   height: 298px;
   overflow: auto;
-  overflow-x: hidden;
 }
 
 
@@ -212,16 +222,11 @@ ol {
   border: 0px solid rgba(217, 217, 217, 0.1);
 }
 
-
-.content__list-item:not(:last-child) {
-  margin-bottom: 30px;
-}
-
-.content__list-item:hover {
+.content__card-link:hover { 
   text-decoration: underline;
 }
 
-.content__list-item:active,
+.content__card-link:active,
 .content__card-link_current {
   background: #545050;
 }
@@ -229,7 +234,6 @@ ol {
 .content__card-link {
   display: block;
   color: #fff;
-  margin: 2px;
   text-decoration: none;
 }
 
@@ -250,22 +254,28 @@ ol {
   font: 700 30px 'Oswald', Arial, sans-serif;
   color: #fff;
   text-transform: uppercase;
-  line-height: 35px;
+  line-height: 34px;
   display: block;
   text-overflow: ellipsis;
   width: 191px;
+  margin-bottom: 4px;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .content__video-card-description {
-  font: 400 18px 'Fira Sans Condensed', Arial, sans-serif;
-  color: #fff;
-  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden;
+  font-weight: inherit;
+  line-height: 16.2px;
 }
 
 .content__video-card-thumbnail {
-  width: 194px;
-  height: 103px;
+  width: 190px;
+  height: 104px;
   object-fit: cover;
   object-position: center;
 }
