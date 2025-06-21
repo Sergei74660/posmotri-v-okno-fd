@@ -50,7 +50,7 @@ ol {
 
 .result {
   width: 711px;
-  height: 456px;
+  min-height: auto;
 }
 
 .result__video-container {
@@ -149,7 +149,7 @@ ol {
   padding: 0 12px;
   background: inherit;
   color: inherit;
-  font: 700 18px inherit;
+  font: 700 18px 'Fira Sans Condensed';
   border: 1px solid #fff;
   cursor: pointer;
 }
@@ -172,7 +172,6 @@ ol {
 }
 
 .search-form__submit-button {
-  font-size: 18px;
   width: 194px;
 }
 
@@ -281,8 +280,8 @@ padding: 0 3px;
 }
 
 .more-button {
-  width: 395px;
-  margin: 2px;
+  width: 390px;
+  margin: 30px 2px 2px;
 }
 
 .visually-hidden {
